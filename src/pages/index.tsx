@@ -7,11 +7,11 @@ import CTASection from "components/CTASection";
 import React, { FC } from "react";
 
 import { useRef } from "react";
-import { Torus } from "@react-three/drei";
+import { Cylinder, Torus } from "@react-three/drei";
 import { TorusBufferGeometry, Vector3 } from "three";
-import ThreeView from "../../node_modules/react-ecs/dist/extras/three/components/ThreeView";
-import { Entity, Facet } from "../../node_modules/react-ecs/dist/";
-import { useQuery, useSystem, useECS } from "../../node_modules/react-ecs/dist/hooks";
+import {ThreeView} from "@ldlework/react-ecs2/extras/three"
+import { Entity, Facet } from "@ldlework/react-ecs2"
+import { useQuery, useSystem, useECS } from "@ldlework/react-ecs2/hooks";
 
 class Spinning extends Facet<Spinning> {
   rotation = new Vector3(0, 0, 0);

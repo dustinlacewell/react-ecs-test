@@ -13,6 +13,7 @@
     "@chakra-ui/react": "^1.4.0",
     "@emotion/react": "^11.1.5",
     "@emotion/styled": "^11.1.5",
+    "@ldlework/react-ecs-3": "^0.0.1",
     "@react-three/drei": "^4.0.4",
     "@react-three/fiber": "^6.0.9",
     "@types/three": "^0.127.0",

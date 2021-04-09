@@ -2466,6 +2466,11 @@
     "@babel/runtime" "^7.7.2"
     regenerator-runtime "^0.13.3"
 
+"@ldlework/react-ecs-3@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@ldlework/react-ecs-3/-/react-ecs-3-0.0.1.tgz#d0d854cf4d5032b2dd8278fc5ecc47429cdd7233"
+  integrity sha512-dpiYi5ZVJaH8f9m3crepERgywhS41Z8q3M/YSD22/viw0dqGlJ3Ejz4eIVawzFcBmZckCIY9gYBBdmvaPHZOvQ==
+
 "@netlify/plugin-nextjs@^3.0.3":
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/@netlify/plugin-nextjs/-/plugin-nextjs-3.0.3.tgz#fb0087f6eff2156bf1b64fdc3d02040923a22d56"
@@ -5701,7 +5706,7 @@ react-dom@^17.0.1, react-dom@^17.0.2:
     scheduler "^0.20.2"
 
 react-ecs@../react-ecs/dist:
-  version "0.0.1"
+  version "0.0.1-b"
   dependencies:
     mobx "^6.1.8"
     mobx-react "^7.1.0"
