@@ -1,27 +1,29 @@
 import { Box } from "@chakra-ui/layout";
-import { Canvas, useFrame } from "@react-three/fiber";
-
-import SomeText from "components/SomeText";
-import SomeImage from "components/SomeImage";
-import CTASection from "components/CTASection";
+import {
+  Entity,
+  Facet,
+  useECS,
+  useQuery,
+  useSystem,
+  View,
+} from "@ldlework/react-ecs";
+import { Torus } from "@react-three/drei";
+import {
+  Canvas,
+  useFrame,
+} from "@react-three/fiber";
 import React, { FC } from "react";
-
-import { useRef } from "react";
-import { Cylinder, Torus } from "@react-three/drei";
-import { TorusBufferGeometry, Vector3 } from "three";
-import {ThreeView} from "@ldlework/react-ecs2/extras/three"
-import { Entity, Facet } from "@ldlework/react-ecs2"
-import { useQuery, useSystem, useECS } from "@ldlework/react-ecs2/hooks";
+import { Vector3 } from "three";
 
 class Spinning extends Facet<Spinning> {
   rotation = new Vector3(0, 0, 0);
 }
 
 const SpinningSystem = () => {
-  const query = useQuery(e => e.hasAll(ThreeView, Spinning));
+  const query = useQuery(e => e.hasAll(View, Spinning));
 
   return useSystem((dt: number) => {
-      query.loop([ThreeView, Spinning], (e, [view, spin]) => {
+      query.loop([View, Spinning], (e, [view, spin]) => {
           const transform = view.ref.current!;
           const rotation = spin.rotation.clone().multiplyScalar(dt);
           const newRotation = transform.rotation
@@ -36,9 +38,9 @@ const SpinningCube = () => {
   return (
       <Entity>
           <Spinning rotation={new Vector3(1, 1, 1)} />
-          <ThreeView>
+          <View>
               <Torus />
-          </ThreeView>
+          </View>
       </Entity>
   );
 };

@@ -1,4 +1,4 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
+import Document, { Head, Html, Main, NextScript } from "next/document";
 
 const APP_NAME = "nextchakra-starter";
 const APP_DESCRIPTION =
@@ -14,7 +14,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <meta name="application-name" content={APP_NAME} />
+          <meta name="react-ecs" content={APP_NAME} />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta
             name="apple-mobile-web-app-status-bar-style"

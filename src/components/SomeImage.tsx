@@ -1,6 +1,7 @@
 import { Link, Text } from "@chakra-ui/layout";
 import Image from "next/image";
 import React from "react";
+
 import MotionBox from "./motion/Box";
 
 const SomeImage = () => {

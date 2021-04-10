@@ -1,13 +1,18 @@
-import { Box, Flex, Heading } from "@chakra-ui/layout";
+import AccessibleLink from 'components/AccessibleLink';
 
-import AccessibleLink from "components/AccessibleLink";
-import ThemeToggle from "./ThemeToggle";
+import {
+  Box,
+  Flex,
+  Heading,
+} from '@chakra-ui/layout';
+
+import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
   return (
     <Flex as="header" width="full" align="center">
       <AccessibleLink href="/">
-        <Heading as="h1">nextchakra-starter</Heading>
+        <Heading as="h1">react-ecs nextjs test</Heading>
       </AccessibleLink>
 
       <Box marginLeft="auto">
